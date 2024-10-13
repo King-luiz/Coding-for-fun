@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        Glowing Cube
+    </title>
+    <style>
+        body {
+            --bg-color:radial-gradient(rgb(15, 14, 14), #0b0a0a);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+           justify-content: center;
+           padding: 10px;
+           margin: 50px;
+            background: var(--bg-color);
+          /*  background: #151515;*/
+        }
+        
+        
+        .luiz{
+            background: #151515;
+            text-align: center;
+            align-items: center;
+            vertical-align:     center;
+            
+        }
+        .cube{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            transform: rotateX(-30deg);
+            animation: animate 4s linear infinite;
+
+
+        }
+        @keyframes animate{
+            0%{
+                transform: rotateX(-30deg) rotateY(-1000deg);
+
+            }
+            100%{
+                transform: rotateX(-30px) rotateY(-380px);
+            }
+        }
+        .cube div{
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+
+        }
+         .cube div span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#15151a,#14e905);
+            transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+         }
+
+         .top{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: #222;
+            transform: rotateX(90deg) translateZ(150px);
+         }
+
+         .top:: before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: #0f0;
+            transform: translateZ(-360px);
+            filter: blur(500px);
+            box-shadow: 0 0 120px rgba (0,255,0,0,2),
+                        0 0 200px rgba (0,255,0,0,4),
+                       0 0 300px rgba (0,255,0,0,6),
+                       0 0 400px rgba (0,255,0,0,8),
+                       0 0 500px rgba (0,255,0,0,1);
+
+           /* box-shadow: 0 0 120px rgba (0,255,0,0.2);
+                        0 0 200px rgba (0,255,0,0.4)
+                        0 0 300px rgba (0,255,0,0.6)
+                        0 0 400px rgba (0,255,0,0.8)
+                        0 0 500px rgba (0,255,0,1)*/
+
+        }
+       /* .form{
+            flex-direction: column;
+            border:5px dashed rgb(51, 222, 12);
+            height: 450px;
+            width: 400px;
+           align-items: center;
+           margin: auto;
+            margin-top: 60px;
+            background-color:rgb(60, 58, 58,0.41);
+            box-shadow: inset -7px -7px rgba(0, 0, 0, 0.5);
+            border-radius: 25px;
+        }
+        .form h1{
+            font-size: 3rem;
+            border-bottom: 5px solid rgb(242, 8, 8);
+            margin: 60px;
+            color: rgb(28, 7, 217);
+        
+        }
+        .box{
+            padding: 12px;
+            margin: 15px;
+            width: 250px;
+            background-color: rgba(0, 0, 0, 0.5);
+            outline: none;
+            border-radius: 20px;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            box-shadow: inset -4px -4px rgba(0, 0, 0, 0.5);
+        
+        }
+        #submit{
+            color: rgb(223, 20, 20);
+            padding: 12px 25px;
+            margin-top: 40px;
+            width: 50%;
+            border-radius: 50px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            border-color: rgba(0, 0, 0, 0.5);
+            box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+            align-items: center;
+        
+        }
+        #submit:hover{
+            cursor:pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: rgb(16, 23, 236);
+        }
+        ::placeholder{
+            color:white;
+            opacity: 0.9;
+        }
+        
+        */
+        
+
+    </style>
+    <body  class="luiz">
+    <div class="cube">
+        <div class="top"></div>
+        <div>
+            <span style="--i:0"></span>
+            <span style="--i:1"></span>
+            <span style="--i:2"></span>
+            <span style="--i:3"></span>
+
+        </div>
+
+
+    </div>
+    <!--<form action="" class="form">
+
+        <h1>LOGIN</h1>
+
+        <input type="email" name="" class="box" placeholder="Enter your username">
+
+        <input type="password" name="password" class="box" placeholder="Enter your  Password">
+
+        <input type="submit" value="LOGIN" id="submit">
+    </form>-->
+    </body>
+</html>

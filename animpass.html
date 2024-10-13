@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animated password input</title>
+
+    <style>
+        input{
+            font-family: "Geist mono",monospace;
+            font-size: 1.75rem;
+            padding: 1rem 2rem;
+            padding-right: 4rem;
+            letter-spacing: 0.2ch;
+            border-radius: 6px;
+            color: var(--color-alpha);
+            border-color: var(--color-alpha);
+            border-style: solid;
+            background: var(--input-bg);
+            outline: none;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        label{
+            position: absolute;
+            color: var(--corol-alpha);
+            font-weight: 800;
+            bottom: calc(100% + 0.5rem);
+            letter-spacing: 0.2ch;
+            transition: color 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="input-container">
+        <input class="eyeball-input" type="password">
+        <i class="fa-eyeball"></i>
+    </div>
+    
+</body>
+</html>
