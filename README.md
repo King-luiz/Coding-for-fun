@@ -32,7 +32,9 @@ project-folder/
 - Add or remove buttons by copying and adjusting the existing `<button>` elements.
 
 ## Example Screenshot
-*(Include a video file or link demonstrating the buttons in action, e.g., an .mp4 or a YouTube link)*
+
+https://github.com/user-attachments/assets/d5b21702-5bed-4f12-9ea2-251ef5119706
+
 
 ---
 
