@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+    <h1>Student Records</h1>
+    <table>
+        <tr>
+            <th>Student Name</th>
+            <th>Mathematics</th>
+            <th>English</th>
+            <th>Kiswahili</th>
+            <th>Science</th>
+        </tr>
+        <tr>
+            <td>Mallin</td>
+            <td>78</td>
+            <td>60</td>
+            <td>86</td>
+            <td>69</td>
+        </tr>
+        <tr>
+            <td>Kelvin</td>
+            <td>57</td>
+            <td>68</td>
+            <td>77</td>
+            <td>70</td>
+        </tr>
+        <tr>
+            <td>Darren</td>
+            <td>65</td>
+            <td>70</td>
+            <td>48</td>
+            <td>49</td>
+        </tr>
+        <tr>
+            <td>Rachael</td>
+            <td>90</td>
+            <td>80</td>
+            <td>65</td>
+            <td>79</td>
+        </tr>
+    </table>
+    <!-- onclick="showMessage()"-->
+</form>
+<button id ="myButton" type="submit" onclick="showMessage()">Submit</button>
+<script>
+    const button = document.getElementById("myButton");
+    button.addEventListener("click", function() {
+    button.textContent = "Form submitted!";
+    });
+</script>
+</body>
+</html>

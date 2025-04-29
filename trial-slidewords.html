@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Quotes</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .content {
+            overflow: hidden;
+            width: 300px; /* Adjust width as needed */
+            height: 100px; /* Adjust height as needed */
+            position: relative;
+        }
+
+        .quote-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            animation: slide 12s infinite; /* 3 seconds per quote, 4 quotes */
+        }
+
+        .quote-container:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .quote-container:nth-child(2) {
+            animation-delay: 3s;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            10% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            25% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            35% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <div class="quote-container">
+        <p>"Football is a simple game. Twenty-two men chase a ball for ninety minutes and at the end, the Germans always win."</p>
+        <p>- Gary Lineker</p>
+    </div>
+    <div class="quote-container">
+        <p>"The beautiful game is played by twenty-two players, but it's won by the eleven who truly believe."</p>
+        <p>- Pele</p>
+    </div>
+</div>
+
+</body>
+</html>
